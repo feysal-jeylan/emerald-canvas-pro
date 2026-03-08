@@ -14,7 +14,90 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      blog_posts: {
+        Row: {
+          content: string
+          created_at: string
+          excerpt: string | null
+          featured_image: string | null
+          id: string
+          published: boolean
+          published_at: string | null
+          read_time: string | null
+          slug: string
+          tags: string[] | null
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          content?: string
+          created_at?: string
+          excerpt?: string | null
+          featured_image?: string | null
+          id?: string
+          published?: boolean
+          published_at?: string | null
+          read_time?: string | null
+          slug: string
+          tags?: string[] | null
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          content?: string
+          created_at?: string
+          excerpt?: string | null
+          featured_image?: string | null
+          id?: string
+          published?: boolean
+          published_at?: string | null
+          read_time?: string | null
+          slug?: string
+          tags?: string[] | null
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      testimonials: {
+        Row: {
+          client_name: string
+          company: string | null
+          created_at: string
+          id: string
+          photo: string | null
+          published: boolean
+          rating: number
+          role: string | null
+          text: string
+          updated_at: string
+        }
+        Insert: {
+          client_name: string
+          company?: string | null
+          created_at?: string
+          id?: string
+          photo?: string | null
+          published?: boolean
+          rating?: number
+          role?: string | null
+          text: string
+          updated_at?: string
+        }
+        Update: {
+          client_name?: string
+          company?: string | null
+          created_at?: string
+          id?: string
+          photo?: string | null
+          published?: boolean
+          rating?: number
+          role?: string | null
+          text?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
