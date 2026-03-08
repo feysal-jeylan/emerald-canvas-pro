@@ -128,9 +128,10 @@ export default function ContactSection() {
             </div>
             <button
               type="submit"
-              className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-emerald-bright transition-all emerald-glow"
+              disabled={sending}
+              className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-emerald-bright transition-all emerald-glow disabled:opacity-60"
             >
-              Send Message <Send size={16} />
+              {sending ? (<><Loader2 size={16} className="animate-spin" /> Sending...</>) : (<>Send Message <Send size={16} /></>)}
             </button>
           </form>
         </div>
