@@ -64,10 +64,12 @@ export type Database = {
           client_name: string
           company: string | null
           created_at: string
+          featured: boolean
           id: string
           photo: string | null
           published: boolean
           rating: number
+          received_date: string | null
           role: string | null
           text: string
           updated_at: string
@@ -76,10 +78,12 @@ export type Database = {
           client_name: string
           company?: string | null
           created_at?: string
+          featured?: boolean
           id?: string
           photo?: string | null
           published?: boolean
           rating?: number
+          received_date?: string | null
           role?: string | null
           text: string
           updated_at?: string
@@ -88,10 +92,12 @@ export type Database = {
           client_name?: string
           company?: string | null
           created_at?: string
+          featured?: boolean
           id?: string
           photo?: string | null
           published?: boolean
           rating?: number
+          received_date?: string | null
           role?: string | null
           text?: string
           updated_at?: string
