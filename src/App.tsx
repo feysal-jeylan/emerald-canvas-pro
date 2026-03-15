@@ -10,7 +10,7 @@ import NotFound from "./pages/NotFound";
 const queryClient = new QueryClient();
 
 // Only use basename on GitHub Pages, not on Lovable preview or other hosts
-const basename = window.location.hostname.includes("github.io") ? "/emerald-canvas-pro" : "";
+const basename = window.location.hostname.includes("github.io") ? "/feysal-portfolio" : "";
 
 const App = () => (
   <QueryClientProvider client={queryClient}>

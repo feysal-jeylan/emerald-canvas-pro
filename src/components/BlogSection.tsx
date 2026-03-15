@@ -23,7 +23,7 @@ function formatDate(dateStr: string | null) {
 }
 
 export default function BlogSection() {
-  const { ref, isVisible } = useScrollAnimation();
+  const { ref, isVisible } = useScrollAnimation(0.05);
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [selected, setSelected] = useState<BlogPost | null>(null);
   const [loaded, setLoaded] = useState(false);
@@ -56,7 +56,7 @@ export default function BlogSection() {
           {posts.map((post, i) => (
             <article
               key={post.id}
-              className={`glass-card overflow-hidden group hover:border-primary/30 transition-all duration-500 hover:scale-[1.02] cursor-pointer ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+              className="glass-card overflow-hidden group hover:border-primary/30 transition-all duration-500 hover:scale-[1.02] cursor-pointer opacity-100 translate-y-0"
               style={{ transitionDelay: `${i * 120}ms` }}
               onClick={() => setSelected(post)}
             >
