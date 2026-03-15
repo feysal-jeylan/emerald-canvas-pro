@@ -23,7 +23,7 @@ function formatDate(dateStr: string | null) {
 }
 
 export default function BlogSection() {
-  const { ref, isVisible } = useScrollAnimation();
+  const { ref, isVisible } = useScrollAnimation(0.05);
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [selected, setSelected] = useState<BlogPost | null>(null);
   const [loaded, setLoaded] = useState(false);
